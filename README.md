@@ -2,7 +2,7 @@
 
 Installation:-
 
-1) Clone the Project in C drive.
+1) Clone the Project.
 2) Go to the file explorer and open ../WeatherConsoleApp/WeatherConsoleApp folder.
 3) Open cmd from that folder.
 4) Run command- dotnet pack
