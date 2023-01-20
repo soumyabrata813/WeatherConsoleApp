@@ -13,7 +13,6 @@ namespace WeatherConsoleApp.Test
         [TestMethod]
         public void GetData()
         {
-            //var getWeatherData = new GetWeatherData();
             City_Latitude_Longitude city_Latitude_Longitude = new City_Latitude_Longitude();
             city_Latitude_Longitude.Latitude = 18.9667;
             city_Latitude_Longitude.Longitude = 72.8333;
