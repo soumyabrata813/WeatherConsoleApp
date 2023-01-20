@@ -43,7 +43,7 @@ namespace WeatherConsoleApp
         {
             City_Latitude_Longitude city_latitude_longitude = new City_Latitude_Longitude(0,0);
             List<City_Details> city_Details = new List<City_Details>();
-            string text = File.ReadAllText("C:/WeatherConsoleApp/WeatherConsoleApp/city_latitude_longitude.json");
+            string text = File.ReadAllText("city_latitude_longitude.json");
             city_Details = JsonConvert.DeserializeObject<List<City_Details>>(text);
             foreach (var city in city_Details)
             {
@@ -58,8 +58,11 @@ namespace WeatherConsoleApp
         }
         public static void Print_Weather(string city_name,Result result)
         {
-            Console.WriteLine(city_name+" current temperature- "+result.current_weather.temperature);
-            Console.Write(city_name + " current windspeed- " + result.current_weather.windspeed);
+            var time=result.current_weather.time.Split('T');
+            Console.WriteLine(city_name+ " weather on " +time[0]+" at "+time[1]);
+            Console.WriteLine("temperature- "+result.current_weather.temperature);
+            Console.WriteLine("windspeed- " + result.current_weather.windspeed);
+            Console.Write("winddirection- " + result.current_weather.winddirection);
         }
     }
 }
