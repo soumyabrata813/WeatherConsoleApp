@@ -43,7 +43,7 @@ namespace WeatherConsoleApp
         {
             City_Latitude_Longitude city_latitude_longitude = new City_Latitude_Longitude(0,0);
             List<City_Details> city_Details = new List<City_Details>();
-            string text = File.ReadAllText("C:/../WeatherConsoleApp/WeatherConsoleApp/city_latitude_longitude.json");
+            string text = File.ReadAllText("C:/WeatherConsoleApp/WeatherConsoleApp/city_latitude_longitude.json");
             city_Details = JsonConvert.DeserializeObject<List<City_Details>>(text);
             foreach (var city in city_Details)
             {
